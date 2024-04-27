@@ -25,6 +25,8 @@ let album = {
 return the newly created object.
 Use and Test the addToCollection function:
 */
+/*Add 6 albums to the myCollection array. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
+console.log each album as added using the function's returned value. */
 console.log(addToCollection(myCollection, 'The National', 'The National', 1994))
 
 console.log(addToCollection(myCollection, 'Ben Folds', 'The Best Imitation of Myself', 2011))
@@ -36,12 +38,11 @@ console.log(addToCollection(myCollection, 'Wilco', 'Yankee Foxtrot Hotel', 1996)
 console.log(addToCollection(myCollection, 'U2', 'Achtung Baby', 1990))
 
 console.log(addToCollection(myCollection, 'The Smile', 'Wall of Eyes', 2024)
-
+            // After all are added, console.log the myCollection array.
 console.log(myCollection);
 
-/*Add 6 albums to the myCollection array. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
-console.log each album as added using the function's returned value. */
-// After all are added, console.log the myCollection array.
+
+
 
 /*Create a function named showCollection. This function should:
 
@@ -49,7 +50,16 @@ Take in a collection parameter. (This allows it to be reused to show any array o
 Loop through the collection and console.log each album's information formatted within a single string, like: TITLE by ARTIST, published in YEARPUBLISHED.
 Test the showCollection function.*/
 
-/*
+function showCollection(collection) {
+  for (let i = 0; i < collection.length; i++){
+    console.log(`${collection[i].title} by ${collection[i].artist}, published in $ {collection[i].yearPublished}`)
+
+  }
+}
+
+
+
+  /*
 Add a function named findByArtist. This function should:
 
 Take in a collection parameter. Remember, we want to be able to search any collection!
@@ -59,10 +69,15 @@ Loop through the collection and add any album objects with a matching artist to 
 Return the array with the matching results. (If no results are found, an empty array should be returned.)
 Test the findByArtist function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are returned.
 */
-
-When testing your functions, write all tests in the JavaScript file!
-
-*/
+function findByArtist(collection, artist) {
+  let matchingArtists = [];
+  for (let i=0; i<collection.length; i++){
+    if (collection[i].artist===artist){
+      matchingArtists.push(collection[i]);
+      
+    }
+  }
+}
 
 
 
