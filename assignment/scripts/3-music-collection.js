@@ -1,8 +1,9 @@
 console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
 //Create an empty array named myCollection.
-let myCollection =[]
-//Create a function named addToCollection.  
+let myCollection = [];
+
+//Create a function named addToCollection.
 //This function should:
 //Take in a collection parameter. (This allows the function to be reused to add an album to any array of album objects.)
 //Take in the album's title, artist, yearPublished as parameters.
@@ -13,8 +14,8 @@ let myCollection =[]
 function addToCollection(collection, title, artist, yearPublished) {
   // your code here...
 let album = {
-  
-  title: title, 
+
+  title: title,
   artist: artist,
   yearPublished: yearPublished
 }
@@ -27,17 +28,13 @@ Use and Test the addToCollection function:
 */
 /*Add 6 albums to the myCollection array. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
 console.log each album as added using the function's returned value. */
-console.log(addToCollection(myCollection, 'The National', 'The National', 1994))
+console.log(addToCollection(myCollection, 'The National', 'The National', 1994));
+console.log(addToCollection(myCollection, 'Ben Folds', 'The Best Imitation of Myself', 2011));
+console.log(addToCollection(myCollection, 'Modest Mouse', 'Good News for People Who Love Bad News', 2004));
+console.log(addToCollection(myCollection, 'Wilco', 'Yankee Foxtrot Hotel', 1996));
+console.log(addToCollection(myCollection, 'U2', 'Achtung Baby', 1990));
+console.log(addToCollection(myCollection, 'The Smile', 'Wall of Eyes', 2024));
 
-console.log(addToCollection(myCollection, 'Ben Folds', 'The Best Imitation of Myself', 2011))
-
-console.log(addToCollection(myCollection, 'Modest Mouse', 'Good News for People Who Love Bad News', 2004))
-
-console.log(addToCollection(myCollection, 'Wilco', 'Yankee Foxtrot Hotel', 1996))
-
-console.log(addToCollection(myCollection, 'U2', 'Achtung Baby', 1990))
-
-console.log(addToCollection(myCollection, 'The Smile', 'Wall of Eyes', 2024)
             // After all are added, console.log the myCollection array.
 console.log(myCollection);
 
@@ -52,7 +49,7 @@ Test the showCollection function.*/
 
 function showCollection(collection) {
   for (let i = 0; i < collection.length; i++){
-    console.log(`${collection[i].title} by ${collection[i].artist}, published in $ {collection[i].yearPublished}`)
+    console.log(`${collection[i].title} by ${collection[i].artist}, published in ${collection[i].yearPublished}`)
 
   }
 }
@@ -74,10 +71,14 @@ function findByArtist(collection, artist) {
   for (let i=0; i<collection.length; i++){
     if (collection[i].artist===artist){
       matchingArtists.push(collection[i]);
-      
+
     }
   }
+  return matchingArtists;
 }
+
+
+
 
 
 
